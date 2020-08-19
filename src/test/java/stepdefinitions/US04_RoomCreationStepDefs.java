@@ -8,7 +8,7 @@ public class US04_RoomCreationStepDefs {
 
     @Given("Hotel Room linkinin calistigi kontrol edilmeli")
     public void hotel_Room_linkinin_calistigi_kontrol_edilmeli() {
-
+        System.out.println("Hi everyone!");
     }
 
     @Given("Add Hotelroom butonunun calistigi kontrol edilmeli")
