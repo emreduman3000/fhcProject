@@ -1,33 +1,104 @@
-package stepdefinitions;
+package pages;
 
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import utilities.Driver;
 
-public class US04_RoomCreationStepDefs {
+public class US04_RoomCreation {
 
-
-    @Given("Hotel Room linkinin calistigi kontrol edilmeli")
-    public void hotel_Room_linkinin_calistigi_kontrol_edilmeli() {
-        System.out.println("Hi everyone!");
+    public US04_RoomCreation(){
+        PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @Given("Add Hotelroom butonunun calistigi kontrol edilmeli")
-    public void add_Hotelroom_butonunun_calistigi_kontrol_edilmeli() {
+    @FindBy(id = "UserName")
+    public WebElement userName;
 
-    }
+    @FindBy(id = "Password")
+    public WebElement password;
 
-    @Given("Butun bilgiler girilip, save butonuna basildiginda basariyla kayit yapildi mesaji gorulmeli")
-    public void butun_bilgiler_girilip_save_butonuna_basildiginda_basariyla_kayit_yapildi_mesaji_gorulmeli() {
+    @FindBy(id = "btnSubmit")
+    public WebElement loginButton;
 
-    }
+    @FindBy(id = "(//span[@class='title'])[1]")
+    public WebElement systemManagement;
 
-    @Given("Girilmesi gereken bilgilerin eksik girililip, save butonuna basildiginda kayit etmediginin gorulmesi")
-    public void girilmesi_gereken_bilgilerin_eksik_girililip_save_butonuna_basildiginda_kayit_etmediginin_gorulmesi() {
-    }
+    @FindBy(xpath = "(//span[@class='title'])[3]")
+    public WebElement hotelManagementLink;
 
-    @Then("Girilen bilgilerin Home List`esinde goruldugunu dogrulayin")
-    public void girilen_bilgilerin_Home_List_esinde_goruldugunu_dogrulayin() {
+    @FindBy(xpath = "//a[@href='/admin/HotelRoomAdmin']")
+    public WebElement hotelRoomsLink;
 
-    }
+    @FindBy(xpath = "//span[@class='hidden-480']")
+    public WebElement addHotelRommButton;
 
+    @FindBy(className ="//a[@href='#']" )
+    public WebElement listOfHoptelrooms;
+
+    @FindBy(id = "IDHotel")
+    public WebElement IDHotel;
+
+    @FindBy(id = "Code")
+    public WebElement codeBox;
+
+    @FindBy(id = "Name")
+    public WebElement nameBox;
+
+    @FindBy(id = "Location")
+    public WebElement locationBox;
+
+    @FindBy(xpath = "//textarea[@dir='ltr']")
+    public WebElement descriptionArea;
+
+
+    @FindBy(id = "IDGroupRoomType")
+    public WebElement roomType;
+
+    @FindBy(id = "MaxAdultCount")
+    public WebElement maxAdultCount;
+
+    @FindBy(id = "MaxChildCount")
+    public WebElement maxChildCount;
+
+    @FindBy(id = "IsAvailable")
+    public WebElement approved;
+
+    @FindBy(id = "btnSubmit")
+    public WebElement saveButton;
+
+    @FindBy(xpath = "//div[@class='bootbox-body']")
+    public  WebElement textMessage;
+
+    @FindBy(xpath = "//button[@class='btn btn-primary']")
+    public WebElement okButton;
+
+    @FindBy(xpath = "//span[@class='caption-subject font-green-sharp bold uppercase']")
+    public WebElement hotelRoomListText;
+
+
+
+    @FindBy(xpath ="(//input[@class='form-control form-filter input-sm'])[1]")
+    public  WebElement idBox;
+
+    @FindBy(id = "lkpHotels")
+    public WebElement idHotelSelect;
+
+
+    @FindBy(xpath ="(//input[@class='form-control form-filter input-sm'])[2]")
+    public  WebElement codeBox2;
+
+    @FindBy(xpath ="(//input[@class='form-control form-filter input-sm'])[3]")
+    public  WebElement nameBox2;
+
+    @FindBy(xpath ="(//input[@class='form-control form-filter input-sm'])[4]")
+    public  WebElement locationBox2;
+
+    @FindBy(xpath ="(//input[@class='form-control form-filter input-sm'])[5]")
+    public  WebElement priceBox;
+
+    @FindBy(id = "lkpGroupRoomTypes")
+    public WebElement idGroupRoomType;
+
+    @FindBy(xpath = "//button[@class='btn btn-sm yellow filter-submit margin-bottom']")
+    public WebElement search;
 }
