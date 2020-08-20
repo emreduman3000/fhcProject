@@ -73,6 +73,8 @@ public class US06_UserListCreation {
 
     @FindBy(xpath = "//div[@class='bootbox-body']")
     public WebElement okMessage;
+
 //ben bu isi cok sevdim
+
 
 }
