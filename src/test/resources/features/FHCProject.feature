@@ -37,6 +37,15 @@ Feature: FHCProject
     And  User enters invalid datas at Create Hotelroomreservation
     Then  LIST OF RESERVATION must be accessible
 
+  @userstory06
+  Scenario: User List Creation
+    Given user go to page
+    Given USER LIST page must be accessible.
+    Given ADD USER button must be executable
+    Given An User can not be added if all required datas is not entered validly.
+    Given An User can be added if all required datas entered validly.
+    Given Check if the Alert Box works.
+    Given Check if added users can be displayed on User List Table.
 
 
 
