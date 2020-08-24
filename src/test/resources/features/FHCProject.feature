@@ -2,7 +2,7 @@
 Feature: FHCProject
 
   @userstory01
-  Scenario:  Login page must be accessible and user can enter datas validly or unvalidly
+  Scenario: US01 Login page must be accessible and user can enter datas validly or unvalidly
     Given Environment must be accesable
     And Invalid username invalid password should not acces
     And Valid username invalid password should not acces
@@ -10,7 +10,7 @@ Feature: FHCProject
     Then Valid username valid password should acces succesfully
 
   @userstory02
-  Scenario:  Main Menu and subtitles must be executable
+  Scenario: US02 Main Menu and subtitles must be executable
     Given System Management must be accesible
     And User Management must be accesible
     And User List must be accesible
@@ -31,7 +31,7 @@ Feature: FHCProject
     Then Check registered data on Hotel List
 
   @userstory04
-  Scenario: TC04_Hotel Room olusturulabilmelidir
+  Scenario: US04_Hotel Room olusturulabilmelidir
     Given Hotel Room linkinin calistigi kontrol edilmeli
     And Add Hotelroom butonunun calistigi kontrol edilmeli
     And Butun bilgiler girilip, save butonuna basildiginda basariyla kayit yapildi mesaji gorulmeli
@@ -40,7 +40,7 @@ Feature: FHCProject
 
 
   @userstory05
-  Scenario:Reservation can be created
+  Scenario: US05 Reservation can be created
     Given ROOM RESERVATIONS page must be accessible
     And  ADD ROOM RESERVATION must be executable
     And  User enters valid datas at Create Hotelroomreservation
@@ -49,7 +49,7 @@ Feature: FHCProject
     Then  LIST OF RESERVATION must be accessible
 
   @userstory06
-  Scenario: User List Creation
+  Scenario: US06 User List Creation
     Given user go to page
     Given USER LIST page must be accessible.
     Given ADD USER button must be executable
