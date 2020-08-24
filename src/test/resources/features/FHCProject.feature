@@ -18,6 +18,17 @@ Feature: FHCProject
     And Hotel List must be accesible
     And Hotel Rooms must be accesible
     Then Room Reservations must be accesible
+    
+  @userstory03
+  Scenario: US03 Hotel must be created
+    Given Navigate to Hotel List
+    And Hotel List must be accessible
+    And Add Hotel must be executable
+    And Unsuccesful registration with invalid data
+    And Clear unsuccesful data
+    And Succesful registration with valid data
+    And Navigate to Hotel List
+    Then Check registered data on Hotel List
 
   @userstory04
   Scenario: TC04_Hotel Room olusturulabilmelidir
