@@ -34,3 +34,23 @@ Feature: FHCProject
     And Check that the Add Hotelroom button works
     And When all the information is entered and the save button is pressed, the message has been saved successfully.
     Then When the information to be entered is not entered, it is seen that it does not register when the save button is pressed.
+
+  @userstory05
+  Scenario: US05 Reservation can be created
+    Given ROOM RESERVATIONS page must be accessible
+    And  ADD ROOM RESERVATION must be executable
+    And  User enters valid datas at Create Hotelroomreservation
+    And  Alert Box must be accessible
+    And  Clear invalid data
+    And  User enters invalid datas at Create Hotelroomreservation
+    Then  LIST OF RESERVATION must be accessible
+
+  @userstory06
+  Scenario: US06 User List Creation
+    Given user go to page
+    Given USER LIST page must be accessible.
+    Given ADD USER button must be executable
+    Given An User can not be added if all required datas is not entered validly.
+    Given An User can be added if all required datas entered validly.
+    Given Check if the Alert Box works.
+    Given Check if added users can be displayed on User List Table.

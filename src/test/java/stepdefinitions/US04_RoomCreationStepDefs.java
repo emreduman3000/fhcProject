@@ -18,23 +18,18 @@ public class US04_RoomCreationStepDefs {
 
     @Given("Check that the Hotel Rooms link works")
     public void check_that_the_Hotel_Rooms_link_works() {
-
         us04_roomCreation.hotelManagementLink.click();
         us04_roomCreation.hotelRoomsLink.click();
-
     }
 
     @And("Check that the Add Hotelroom button works")
     public void check_that_the_Add_Hotelroom_button_works() throws InterruptedException {
-
         Thread.sleep(5000);
         us04_roomCreation.addHotelRommButton.click();
-
     }
 
     @And("When all the information is entered and the save button is pressed, the message has been saved successfully.")
     public void when_all_the_information_is_entered_and_the_save_button_is_pressed_the_message_has_been_saved_successfully() throws InterruptedException {
-
         Select select=new Select(us04_roomCreation.IDHotel);
         select.selectByIndex(2);
         us04_roomCreation.codeBox.sendKeys("123322");
@@ -56,13 +51,10 @@ public class US04_RoomCreationStepDefs {
         String textSuccesfully=us04_roomCreation.textMessage.getText();
         Assert.assertEquals(textSuccesfully,"HotelRoom was inserted successfully");
         us04_roomCreation.okButton.click();
-
-
     }
 
     @Then("When the information to be entered is not entered, it is seen that it does not register when the save button is pressed.")
     public void when_the_information_to_be_entered_is_not_entered_it_is_seen_that_it_does_not_register_when_the_save_button_is_pressed() throws InterruptedException {
-
         Select select=new Select(us04_roomCreation.IDHotel);
         select.selectByIndex(2);
         us04_roomCreation.codeBox.sendKeys("123322");
@@ -86,7 +78,5 @@ public class US04_RoomCreationStepDefs {
         // String textSuccesfully=us04_roomCreation.textMessage.getText();
         // Assert.assertTrue(textSuccesfully.equals("HotelRoom was inserted successfully"));
         //// us04_roomCreation.okButton.click();
-
     }
-
 }

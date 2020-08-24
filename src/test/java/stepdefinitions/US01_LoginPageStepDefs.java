@@ -12,7 +12,6 @@ public class US01_LoginPageStepDefs  {
 
     US01_LoginPage us01_loginPage=new US01_LoginPage();
 
-
     @Given("Environment must be accesable")
     public void environment_must_be_accesable() {
         Driver.getDriver().get(ConfigurationReader.getProp("fhc_login_url"));

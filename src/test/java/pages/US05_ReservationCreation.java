@@ -14,6 +14,9 @@ public class US05_ReservationCreation
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+    @FindBy(id = "menuHotels")
+    public WebElement hotelManagementButton;
+
     @FindBy(xpath = "//a[@href='/admin/RoomReservationAdmin']")
     public WebElement roomReservation;
 
@@ -64,17 +67,4 @@ public class US05_ReservationCreation
     public  WebElement searchButton;
     @FindBy(xpath = "//*[@id='datatable_ajax']/tbody/tr[1]/td[11]")
     public WebElement registeredEmail;
-    public void clearDatas()
-    {
-        US05_ReservationCreation us05_reservationCreation=new US05_ReservationCreation();
-        us05_reservationCreation.price.clear();
-        us05_reservationCreation.adultAmount.clear();
-        us05_reservationCreation.childrenAmount.clear();
-        us05_reservationCreation.surname.clear();
-        us05_reservationCreation.phone.clear();
-        us05_reservationCreation.email.clear();
-        us05_reservationCreation.notes.clear();
-        us05_reservationCreation.isApproved.isSelected();
-        us05_reservationCreation.isPaid.isSelected();
-    }
 }

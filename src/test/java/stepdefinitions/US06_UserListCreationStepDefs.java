@@ -18,10 +18,10 @@ public class US06_UserListCreationStepDefs {
 
     @Given("user go to page")
     public void user_go_to_page() {
-        Driver.getDriver().get("http://fhctrip-qa.com/Account/LogOn?ReturnUrl=%2Fadmin%2FuserAdmin%2FCreate");
-        uspage06.loginUserName.sendKeys("manager2");
-        uspage06.loginpassword.sendKeys("Man1ager2!");
-        uspage06.loginbutton.click();
+        //Driver.getDriver().get("http://fhctrip-qa.com/Account/LogOn?ReturnUrl=%2Fadmin%2FuserAdmin%2FCreate");
+        //uspage06.loginUserName.sendKeys("manager2");
+        //uspage06.loginpassword.sendKeys("Man1ager2!");
+        //uspage06.loginbutton.click();
     }
 
     @Given("USER LIST page must be accessible.")
@@ -33,12 +33,11 @@ public class US06_UserListCreationStepDefs {
     @Given("ADD USER button must be executable")
     public void add_USER_button_must_be_executable() {
         Assert.assertTrue(uspage06.addUserButton.isDisplayed());
-
     }
 
     @Given("An User can not be added if all required datas is not entered validly.")
     public void an_User_can_not_be_added_if_all_required_datas_is_not_entered_validly() throws InterruptedException {
-
+        uspage06.addUserButton.click();
         uspage06.userName.sendKeys("Emre");
         uspage06.password.sendKeys("Ppasword");
         uspage06.email.sendKeys("abc@gmail.com");
@@ -57,7 +56,6 @@ public class US06_UserListCreationStepDefs {
         role.selectByIndex(1);
         uspage06.yesButton.click();
         uspage06.saveButton.click();
-
         uspage06.userName.clear();
         uspage06.password.clear();
         uspage06.email.clear();
@@ -65,13 +63,9 @@ public class US06_UserListCreationStepDefs {
         uspage06.phone.clear();
         uspage06.ssn.clear();
         uspage06.driverLicense.clear();
-
-
         uspage06.address.clear();
         uspage06.birthdate.clear();
         uspage06.workingSector.clear();
-
-
     }
 
     @Given("An User can be added if all required datas entered validly.")
@@ -98,9 +92,6 @@ public class US06_UserListCreationStepDefs {
         uspage06.saveButton.click();
         Thread.sleep(3000);
         Assert.assertEquals(uspage06.successMessage.getText(),"User was inserted successfully");
-
-
-
     }
 
     @Given("Check if the Alert Box works.")
@@ -115,19 +106,17 @@ public class US06_UserListCreationStepDefs {
 
     @Given("Check if added users can be displayed on User List Table.")
     public void check_if_added_users_can_be_displayed_on_User_List_Table() throws InterruptedException {
-
-
         Actions actions=new Actions(Driver.getDriver());
         actions.sendKeys(Keys.HOME).perform();
+        Thread.sleep(3000);
         uspage06.userListButton.click();
         uspage06.searchEmail.sendKeys("abc@gmail.com");
         uspage06.searchButton.click();
-
         Thread.sleep(3000);
         Assert.assertTrue(uspage06.searchName.getText().equals("emreeree"));
 
+
+
     }
-
-
 }
 

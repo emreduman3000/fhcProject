@@ -15,7 +15,7 @@ public class US06_UserListCreation {
     public WebElement managementTitle;
     @FindBy(xpath = "//a[@href='/admin/UserAdmin']")
     public WebElement userListButton;
-    @FindBy(xpath = "//i[@class='icon-calendar']")
+    @FindBy(xpath = "//i[@class='fa fa-plus']")
     public WebElement addUserButton;
     @FindBy(id = "UserName")
     public WebElement userName;
@@ -55,13 +55,6 @@ public class US06_UserListCreation {
     public WebElement mailsearch;
     @FindBy(xpath = "//div[@class=\"alert alert-danger display-hide\"]")
     public WebElement failMessage;
-
-    @FindBy(id = "UserName")
-    public WebElement loginUserName;
-    @FindBy(id = "Password")
-    public WebElement loginpassword;
-    @FindBy(xpath = "//button[@class='btn btn-success uppercase']")
-    public WebElement loginbutton;
 
     @FindBy(xpath = "//input[@name='Email']")
     public WebElement searchEmail;
