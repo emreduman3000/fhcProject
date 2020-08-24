@@ -3,17 +3,28 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-08-12T14:34:13.829Z",
+        "start_timestamp": "2020-08-21T05:15:44.826Z",
         "line": 5,
-        "name": "Login page must be accessible and user can enter datas validly or unvalidly",
+        "name": "US01 Login page must be accessible and user can enter datas validly or unvalidly",
         "description": "",
-        "id": "fhcproject;login-page-must-be-accessible-and-user-can-enter-datas-validly-or-unvalidly",
+        "id": "fhcproject;us01-login-page-must-be-accessible-and-user-can-enter-datas-validly-or-unvalidly",
+        "after": [
+          {
+            "result": {
+              "duration": 876000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 35928346500,
+              "duration": 7665000000,
               "status": "passed"
             },
             "line": 6,
@@ -25,7 +36,7 @@
           },
           {
             "result": {
-              "duration": 2194040000,
+              "duration": 1113000000,
               "status": "passed"
             },
             "line": 7,
@@ -37,7 +48,7 @@
           },
           {
             "result": {
-              "duration": 970982300,
+              "duration": 737000000,
               "status": "passed"
             },
             "line": 8,
@@ -49,7 +60,7 @@
           },
           {
             "result": {
-              "duration": 843073700,
+              "duration": 735000000,
               "status": "passed"
             },
             "line": 9,
@@ -61,7 +72,7 @@
           },
           {
             "result": {
-              "duration": 31437262700,
+              "duration": 3572000000,
               "status": "passed"
             },
             "line": 10,
@@ -82,17 +93,39 @@
         ]
       },
       {
-        "start_timestamp": "2020-08-12T14:35:25.351Z",
+        "start_timestamp": "2020-08-21T05:15:59.636Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1544000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.login()"
+            }
+          }
+        ],
         "line": 13,
-        "name": "Main Menu and subtitles must be executable",
+        "name": "US02 Main Menu and subtitles must be executable",
         "description": "",
-        "id": "fhcproject;main-menu-and-subtitles-must-be-executable",
+        "id": "fhcproject;us02-main-menu-and-subtitles-must-be-executable",
+        "after": [
+          {
+            "result": {
+              "duration": 2672000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 85141300,
+              "duration": 90000000,
               "status": "passed"
             },
             "line": 14,
@@ -104,34 +137,10 @@
           },
           {
             "result": {
-              "duration": 56750600,
+              "duration": 404000000,
               "status": "passed"
             },
             "line": 15,
-            "name": "User Management must be accesible",
-            "match": {
-              "location": "stepdefinitions.US02_HomePageStepDefs.user_Management_must_be_accesible()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1140076400,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "User List must be accesible",
-            "match": {
-              "location": "stepdefinitions.US02_HomePageStepDefs.user_List_must_be_accesible()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 320882500,
-              "status": "passed"
-            },
-            "line": 17,
             "name": "Hotel Management must be accesible",
             "match": {
               "location": "stepdefinitions.US02_HomePageStepDefs.hotel_Management_must_be_accesible()"
@@ -140,10 +149,10 @@
           },
           {
             "result": {
-              "duration": 1183325500,
+              "duration": 780000000,
               "status": "passed"
             },
-            "line": 18,
+            "line": 16,
             "name": "Hotel List must be accesible",
             "match": {
               "location": "stepdefinitions.US02_HomePageStepDefs.hotel_List_must_be_accesible()"
@@ -152,10 +161,10 @@
           },
           {
             "result": {
-              "duration": 2054303200,
+              "duration": 915000000,
               "status": "passed"
             },
-            "line": 19,
+            "line": 17,
             "name": "Hotel Rooms must be accesible",
             "match": {
               "location": "stepdefinitions.US02_HomePageStepDefs.hotel_Rooms_must_be_accesible()"
@@ -164,10 +173,10 @@
           },
           {
             "result": {
-              "duration": 1181056500,
+              "duration": 966000000,
               "status": "passed"
             },
-            "line": 20,
+            "line": 18,
             "name": "Room Reservations must be accesible",
             "match": {
               "location": "stepdefinitions.US02_HomePageStepDefs.room_Reservations_must_be_accesible()"
@@ -185,68 +194,218 @@
         ]
       },
       {
-        "start_timestamp": "2020-08-12T14:35:31.382Z",
-        "line": 23,
-        "name": "TC04_Hotel Room olusturulabilmelidir",
+        "start_timestamp": "2020-08-21T05:16:07.015Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1695000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.login()"
+            }
+          }
+        ],
+        "line": 21,
+        "name": "US03 Hotel must be created",
         "description": "",
-        "id": "fhcproject;tc04-hotel-room-olusturulabilmelidir",
+        "id": "fhcproject;us03-hotel-must-be-created",
+        "after": [
+          {
+            "result": {
+              "duration": 858000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1002600,
+              "duration": 1127000000,
               "status": "passed"
             },
-            "line": 24,
-            "name": "Hotel Room linkinin calistigi kontrol edilmeli",
+            "line": 22,
+            "name": "Navigate to Hotel List",
             "match": {
-              "location": "stepdefinitions.US04_RoomCreationStepDefs.hotel_Room_linkinin_calistigi_kontrol_edilmeli()"
+              "location": "stepdefinitions.US03_HotelCreationStepDefs.navigate_to_hotel_list()"
             },
             "keyword": "Given "
           },
           {
             "result": {
+              "duration": 48000000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Hotel List must be accessible",
+            "match": {
+              "location": "stepdefinitions.US03_HotelCreationStepDefs.hotel_list_must_be_accessible()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 550000000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "Add Hotel must be executable",
+            "match": {
+              "location": "stepdefinitions.US03_HotelCreationStepDefs.add_hotel_must_be_executable()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 539000000,
               "status": "passed"
             },
             "line": 25,
-            "name": "Add Hotelroom butonunun calistigi kontrol edilmeli",
+            "name": "Unsuccesful registration with invalid data",
             "match": {
-              "location": "stepdefinitions.US04_RoomCreationStepDefs.add_Hotelroom_butonunun_calistigi_kontrol_edilmeli()"
+              "location": "stepdefinitions.US03_HotelCreationStepDefs.unsuccesful_registration_with_invalid_data()"
             },
             "keyword": "And "
           },
           {
             "result": {
+              "duration": 394000000,
               "status": "passed"
             },
             "line": 26,
-            "name": "Butun bilgiler girilip, save butonuna basildiginda basariyla kayit yapildi mesaji gorulmeli",
+            "name": "Clear unsuccesful data",
             "match": {
-              "location": "stepdefinitions.US04_RoomCreationStepDefs.butun_bilgiler_girilip_save_butonuna_basildiginda_basariyla_kayit_yapildi_mesaji_gorulmeli()"
+              "location": "stepdefinitions.US03_HotelCreationStepDefs.clear_unsuccesful_data()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1003100,
+              "duration": 890000000,
               "status": "passed"
             },
             "line": 27,
-            "name": "Girilmesi gereken bilgilerin eksik girililip, save butonuna basildiginda kayit etmediginin gorulmesi",
+            "name": "Succesful registration with valid data",
             "match": {
-              "location": "stepdefinitions.US04_RoomCreationStepDefs.girilmesi_gereken_bilgilerin_eksik_girililip_save_butonuna_basildiginda_kayit_etmediginin_gorulmesi()"
+              "location": "stepdefinitions.US03_HotelCreationStepDefs.succesful_registration_with_valid_data()"
             },
             "keyword": "And "
           },
           {
             "result": {
+              "duration": 1144000000,
               "status": "passed"
             },
             "line": 28,
-            "name": "Girilen bilgilerin Home List`esinde goruldugunu dogrulayin",
+            "name": "Navigate to Hotel List",
             "match": {
-              "location": "stepdefinitions.US04_RoomCreationStepDefs.girilen_bilgilerin_Home_List_esinde_goruldugunu_dogrulayin()"
+              "location": "stepdefinitions.US03_HotelCreationStepDefs.navigate_to_hotel_list()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1154000000,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "Check registered data on Hotel List",
+            "match": {
+              "location": "stepdefinitions.US03_HotelCreationStepDefs.check_registered_data_on_hotel_list()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@fhcproject"
+          },
+          {
+            "name": "@userstory03"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-08-21T05:16:15.421Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1735000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.login()"
+            }
+          }
+        ],
+        "line": 32,
+        "name": "US04 Hotel Rooms must be created",
+        "description": "",
+        "id": "fhcproject;us04-hotel-rooms-must-be-created",
+        "after": [
+          {
+            "result": {
+              "duration": 790000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1073000000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "Check that the Hotel Rooms link works",
+            "match": {
+              "location": "stepdefinitions.US04_RoomCreationStepDefs.check_that_the_Hotel_Rooms_link_works()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6749000000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "Check that the Add Hotelroom button works",
+            "match": {
+              "location": "stepdefinitions.US04_RoomCreationStepDefs.check_that_the_Add_Hotelroom_button_works()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10055000000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "When all the information is entered and the save button is pressed, the message has been saved successfully.",
+            "match": {
+              "location": "stepdefinitions.US04_RoomCreationStepDefs.when_all_the_information_is_entered_and_the_save_button_is_pressed_the_message_has_been_saved_successfully()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 9527000000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "When the information to be entered is not entered, it is seen that it does not register when the save button is pressed.",
+            "match": {
+              "location": "stepdefinitions.US04_RoomCreationStepDefs.when_the_information_to_be_entered_is_not_entered_it_is_seen_that_it_does_not_register_when_the_save_button_is_pressed()"
             },
             "keyword": "Then "
           }
@@ -257,98 +416,6 @@
           },
           {
             "name": "@userstory04"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-08-12T14:35:31.390Z",
-        "line": 32,
-        "name": "Reservation can be created",
-        "description": "",
-        "id": "fhcproject;reservation-can-be-created",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 1307815900,
-              "status": "passed"
-            },
-            "line": 33,
-            "name": "ROOM RESERVATIONS page must be accessible",
-            "match": {
-              "location": "stepdefinitions.US05_ReservationCreationStepDefs.room_RESERVATIONS_page_must_be_accessible()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 940501700,
-              "status": "passed"
-            },
-            "line": 34,
-            "name": "ADD ROOM RESERVATION must be executable",
-            "match": {
-              "location": "stepdefinitions.US05_ReservationCreationStepDefs.add_ROOM_RESERVATION_must_be_executable()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 5119692000,
-              "status": "passed"
-            },
-            "line": 35,
-            "name": "User enters valid datas at Create Hotelroomreservation",
-            "match": {
-              "location": "stepdefinitions.US05_ReservationCreationStepDefs.user_enters_valid_datas_at_Create_Hotelroomreservation()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 157256600,
-              "status": "passed"
-            },
-            "line": 36,
-            "name": "Alert Box must be accessible",
-            "match": {
-              "location": "stepdefinitions.US05_ReservationCreationStepDefs.alert_Box_must_be_accessible()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1582032000,
-              "status": "passed"
-            },
-            "line": 37,
-            "name": "User enters invalid datas at Create Hotelroomreservation",
-            "match": {
-              "location": "stepdefinitions.US05_ReservationCreationStepDefs.user_enters_invalid_datas_at_Create_Hotelroomreservation()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "error_message": "org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element \u003cbutton class\u003d\"btn btn-sm yellow filter-submit margin-bottom\"\u003e...\u003c/button\u003e is not clickable at point (1263, 340). Other element would receive the click: \u003cselect name\u003d\"IsPaid\" class\u003d\"form-control form-filter input-sm\"\u003e...\u003c/select\u003e\n  (Session info: chrome\u003d84.0.4147.105)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027NBS217552995\u0027, ip: \u0027192.168.0.17\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.6\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.105, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\\Users\\EMREDU~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:53999}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 84c59c1f74e1bda22be8eb6db78c6593\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\r\n\tat com.sun.proxy.$Proxy18.click(Unknown Source)\r\n\tat stepdefinitions.US05_ReservationCreationStepDefs.list_OF_RESERVATION_must_be_accessible(US05_ReservationCreationStepDefs.java:145)\r\n\tat ✽.LIST OF RESERVATION must be accessible(file:///C:/Users/emreduman/IdeaProjects/FHCProject/src/test/resources/features/FHCProject.feature:38)\r\n",
-              "duration": 2705775300,
-              "status": "failed"
-            },
-            "line": 38,
-            "name": "LIST OF RESERVATION must be accessible",
-            "match": {
-              "location": "stepdefinitions.US05_ReservationCreationStepDefs.list_OF_RESERVATION_must_be_accessible()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@fhcproject"
-          },
-          {
-            "name": "@userstory05"
           }
         ]
       }
