@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="29.918">
-<testcase classname="FHCProject" name="US05 Reservation can be created" time="29.652">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="100.119">
+<testcase classname="FHCProject" name="US01 Login page must be accessible and user can enter datas validly or unvalidly" time="16.426">
+<system-out><![CDATA[Given Environment must be accesable.........................................passed
+And Invalid username invalid password should not acces......................passed
+And Valid username invalid password should not acces........................passed
+And inValid username valid password should not acces........................passed
+Then Valid username valid password should acces succesfully.................passed
+]]></system-out>
+</testcase>
+<testcase classname="FHCProject" name="US02 Main Menu and subtitles must be executable" time="6.601">
+<system-out><![CDATA[Given System Management must be accesible...................................passed
+And Hotel Management must be accesible......................................passed
+And Hotel List must be accesible............................................passed
+And Hotel Rooms must be accesible...........................................passed
+Then Room Reservations must be accesible....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="FHCProject" name="US03 Hotel must be created" time="9.283">
+<system-out><![CDATA[Given Navigate to Hotel List................................................passed
+And Hotel List must be accessible...........................................passed
+And Add Hotel must be executable............................................passed
+And Unsuccesful registration with invalid data..............................passed
+And Clear unsuccesful data..................................................passed
+And Succesful registration with valid data..................................passed
+And Navigate to Hotel List..................................................passed
+Then Check registered data on Hotel List....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="FHCProject" name="US04 Hotel Rooms must be created" time="29.262">
+<system-out><![CDATA[Given Check that the Hotel Rooms link works.................................passed
+And Check that the Add Hotelroom button works...............................passed
+And When all the information is entered and the save button is pressed, the message has been saved successfully..passed
+Then When the information to be entered is not entered, it is seen that it does not register when the save button is pressed..passed
+]]></system-out>
+</testcase>
+<testcase classname="FHCProject" name="US05 Reservation can be created" time="20.419">
 <system-out><![CDATA[Given ROOM RESERVATIONS page must be accessible.............................passed
 And ADD ROOM RESERVATION must be executable.................................passed
 And User enters valid datas at Create Hotelroomreservation..................passed
@@ -8,6 +42,16 @@ And Alert Box must be accessible............................................pass
 And Clear invalid data......................................................passed
 And User enters invalid datas at Create Hotelroomreservation................passed
 Then LIST OF RESERVATION must be accessible.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="FHCProject" name="US06 User List Creation" time="17.93">
+<system-out><![CDATA[Given user go to page.......................................................passed
+Given USER LIST page must be accessible.....................................passed
+Given ADD USER button must be executable....................................passed
+Given An User can not be added if all required datas is not entered validly..passed
+Given An User can be added if all required datas entered validly............passed
+Given Check if the Alert Box works..........................................passed
+Given Check if added users can be displayed on User List Table..............passed
 ]]></system-out>
 </testcase>
 </testsuite>
