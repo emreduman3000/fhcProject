@@ -21,9 +21,6 @@ public class US01_LoginPage  {
     @FindBy(id ="btnSubmit")
     public WebElement loginButton;
 
-    @FindBy(xpath = "//button[@type='submit']")
-    public WebElement loginButton2;
-
     @FindBy(xpath = "//span[.='Try again please']")
     public WebElement error_mesaj;
 }

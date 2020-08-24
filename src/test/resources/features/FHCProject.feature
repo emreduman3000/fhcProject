@@ -12,13 +12,11 @@ Feature: FHCProject
   @userstory02
   Scenario: US02 Main Menu and subtitles must be executable
     Given System Management must be accesible
-    And User Management must be accesible
-    And User List must be accesible
     And Hotel Management must be accesible
     And Hotel List must be accesible
     And Hotel Rooms must be accesible
     Then Room Reservations must be accesible
-    
+
   @userstory03
   Scenario: US03 Hotel must be created
     Given Navigate to Hotel List
@@ -31,32 +29,8 @@ Feature: FHCProject
     Then Check registered data on Hotel List
 
   @userstory04
-  Scenario: US04_Hotel Room olusturulabilmelidir
-    Given Hotel Room linkinin calistigi kontrol edilmeli
-    And Add Hotelroom butonunun calistigi kontrol edilmeli
-    And Butun bilgiler girilip, save butonuna basildiginda basariyla kayit yapildi mesaji gorulmeli
-    And Girilmesi gereken bilgilerin eksik girililip, save butonuna basildiginda kayit etmediginin gorulmesi
-    Then Girilen bilgilerin Home List`esinde goruldugunu dogrulayin
-
-
-  @userstory05
-  Scenario: US05 Reservation can be created
-    Given ROOM RESERVATIONS page must be accessible
-    And  ADD ROOM RESERVATION must be executable
-    And  User enters valid datas at Create Hotelroomreservation
-    And  Alert Box must be accessible
-    And  User enters invalid datas at Create Hotelroomreservation
-    Then  LIST OF RESERVATION must be accessible
-
-  @userstory06
-  Scenario: US06 User List Creation
-    Given user go to page
-    Given USER LIST page must be accessible.
-    Given ADD USER button must be executable
-    Given An User can not be added if all required datas is not entered validly.
-    Given An User can be added if all required datas entered validly.
-    Given Check if the Alert Box works.
-    Given Check if added users can be displayed on User List Table.
-
-
-
+  Scenario: US04 Hotel Rooms must be created
+    Given Check that the Hotel Rooms link works
+    And Check that the Add Hotelroom button works
+    And When all the information is entered and the save button is pressed, the message has been saved successfully.
+    Then When the information to be entered is not entered, it is seen that it does not register when the save button is pressed.

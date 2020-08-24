@@ -1,13 +1,12 @@
 package stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.testng.Assert;
 import pages.US01_LoginPage;
 import utilities.ConfigurationReader;
 import utilities.Driver;
-
-import java.util.concurrent.TimeUnit;
 
 public class US01_LoginPageStepDefs  {
 
@@ -16,60 +15,48 @@ public class US01_LoginPageStepDefs  {
 
     @Given("Environment must be accesable")
     public void environment_must_be_accesable() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("fhc_login_url"));
+        Driver.getDriver().get(ConfigurationReader.getProp("fhc_login_url"));
         Assert.assertEquals(Driver.getDriver().getTitle(),"Fhctrip - Log in");
-        Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);//  ==>>> TestBase'e de koyabilirim
-
     }
 
-    @Given("Invalid username invalid password should not acces")
+    @And("Invalid username invalid password should not acces")
     public void invalid_username_invalid_password_should_not_acces() {
         us01_loginPage.username.sendKeys("managerrrr");
         us01_loginPage.password.sendKeys("Man1ager22!");
         us01_loginPage.loginButton.click();
-        Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);//  ==>>> TestBase'e de koyabilirim
-
         Assert.assertTrue(us01_loginPage.error_mesaj.isDisplayed());
         cleanTextboxes();
     }
 
-    @Given("Valid username invalid password should not acces")
+    @And("Valid username invalid password should not acces")
     public void valid_username_invalid_password_should_not_acces() {
         us01_loginPage.username.sendKeys("manager2");
         us01_loginPage.password.sendKeys("Man12ager2!");
         us01_loginPage.loginButton.click();
-        Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);//  ==>>> TestBase'e de koyabilirim
-
         Assert.assertTrue(us01_loginPage.error_mesaj.isDisplayed());
         cleanTextboxes();
     }
 
-    @Given("inValid username valid password should not acces")
+    @And("inValid username valid password should not acces")
     public void invalid_username_valid_password_should_not_acces() {
         us01_loginPage.username.sendKeys("manager");
         us01_loginPage.password.sendKeys("Man1ager2!");
         us01_loginPage.loginButton.click();
-        Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);//  ==>>> TestBase'e de koyabilirim
-
         Assert.assertTrue(us01_loginPage.error_mesaj.getText().contains("Try again please"));
         cleanTextboxes();
     }
 
     @Then("Valid username valid password should acces succesfully")
     public void valid_username_valid_password_should_acces_succesfully() {
-        us01_loginPage.username.sendKeys(ConfigurationReader.getProperty("validUsername"));
-        us01_loginPage.password.sendKeys(ConfigurationReader.getProperty("validPassword"));
-
+        us01_loginPage.username.sendKeys("manager2");
+        us01_loginPage.password.sendKeys("Man1ager2!");
         us01_loginPage.loginButton.click();
-        Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);//  ==>>> TestBase'e de koyabilirim;
         Assert.assertEquals(Driver.getDriver().getTitle(),"Admin - ListOfUsers");//Admin - ListOfUsers
     }
+
     public void cleanTextboxes()
     {
         us01_loginPage.username.clear();
         us01_loginPage.password.clear();
     }
-
-
-
 }
