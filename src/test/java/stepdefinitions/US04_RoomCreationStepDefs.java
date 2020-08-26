@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import gherkin.lexer.Th;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -13,8 +14,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.US04_RoomCreation;
 import utilities.Driver;
-
-import java.security.Key;
 
 public class US04_RoomCreationStepDefs {
     US04_RoomCreation us04_roomCreation=new US04_RoomCreation();
@@ -38,6 +37,7 @@ public class US04_RoomCreationStepDefs {
     @Given("When all the information is entered and the save button is pressed, the message has been saved successfully.")
     public void when_all_the_information_is_entered_and_the_save_button_is_pressed_the_message_has_been_saved_successfully() throws InterruptedException {
 
+        Thread.sleep(3000);
         Select select=new Select(us04_roomCreation.IDHotel);
         select.selectByIndex(2);
         us04_roomCreation.codeBox.sendKeys("123322");
@@ -72,7 +72,7 @@ public class US04_RoomCreationStepDefs {
         us04_roomCreation.codeBox.sendKeys("123322");
         us04_roomCreation.nameBox.sendKeys("olimpos2");
         us04_roomCreation.locationBox.clear();
-        //us04_roomCreation.locationBox.sendKeys("greek");
+        us04_roomCreation.locationBox.sendKeys("greek");
         actions.sendKeys(Keys.PAGE_DOWN).perform();
         us04_roomCreation.descriptionArea.clear();
         us04_roomCreation.descriptionArea.sendKeys("greek`te bir otel");
@@ -87,13 +87,16 @@ public class US04_RoomCreationStepDefs {
         us04_roomCreation.maxChildCount.sendKeys("4");
         us04_roomCreation.approved.click();
         us04_roomCreation.saveButton.click();
-        // String textSuccesfully=us04_roomCreation.textMessage.getText();
-        // Assert.assertTrue(textSuccesfully.equals("HotelRoom was inserted successfully"));
-        // us04_roomCreation.okButton.click();
+        Thread.sleep(5000);
+        String textSuccesfully=us04_roomCreation.textMessage.getText();
+        Assert.assertEquals(textSuccesfully,"HotelRoom was inserted successfully");
+        us04_roomCreation.okButton.click();
 
     }
     @Then("Verify that the entered information is displayed in the Hotel Rooms list")
-    public void verify_that_the_entered_information_is_displayed_in_the_hotel_rooms_list() {
+    public void verify_that_the_entered_information_is_displayed_in_the_hotel_rooms_list() throws InterruptedException {
+        actions.sendKeys(Keys.HOME).perform();
+        Thread.sleep(5000);
         us04_roomCreation.hotelRoomsLink.click();
         String hotelRoomText= us04_roomCreation.hotelRoomListText.getText();
         Assert.assertEquals(hotelRoomText,"LIST OF HOTELROOMS");
@@ -107,9 +110,6 @@ public class US04_RoomCreationStepDefs {
         Select select1=new Select(us04_roomCreation.idGroupRoomType);
         select1.selectByIndex(9);
         us04_roomCreation.search.click();
-
-
-
 
     }
 }
