@@ -23,10 +23,14 @@ public class US04_RoomCreation {
     @FindBy(id = "(//span[@class='title'])[1]")
     public WebElement systemManagement;
 
-    @FindBy(xpath = "(//span[@class='title'])[3]")
+    @FindBy(xpath = "//div[@class='page-content-wrapper']")
+    public WebElement sideBar;
+
+    @FindBy(id = "menuHotels")
     public WebElement hotelManagementLink;
 
-    @FindBy(xpath = "//a[@href='/admin/HotelRoomAdmin']")
+    @FindBy(partialLinkText = "Hotel Rooms")
+    //@FindBy(xpath = "//a[@href='/admin/HotelRoomAdmin']")
     public WebElement hotelRoomsLink;
 
     @FindBy(xpath = "//span[@class='hidden-480']")
@@ -66,7 +70,8 @@ public class US04_RoomCreation {
     @FindBy(id = "btnSubmit")
     public WebElement saveButton;
 
-    @FindBy(xpath = "//div[@class='bootbox-body']")
+    @FindBy(className = "bootbox-body")
+    //@FindBy(xpath = "//div[text()='HotelRoom was inserted successfully']")
     public  WebElement textMessage;
 
     @FindBy(xpath = "//button[@class='btn btn-primary']")

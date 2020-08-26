@@ -29,11 +29,12 @@ Feature: FHCProject
     Then Check registered data on Hotel List
 
   @userstory04
-  Scenario: US04 Hotel Rooms must be created
+  Scenario: US04 Hotel Room must be created.
     Given Check that the Hotel Rooms link works
     And Check that the Add Hotelroom button works
     And When all the information is entered and the save button is pressed, the message has been saved successfully.
-    Then When the information to be entered is not entered, it is seen that it does not register when the save button is pressed.
+    And When the information to be entered is not entered, it is seen that it does not register when the save button is pressed.
+    Then Verify that the entered information is displayed in the Hotel Rooms list
 
   @userstory05
   Scenario: US05 Reservation can be created

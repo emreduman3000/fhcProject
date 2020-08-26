@@ -114,9 +114,6 @@ public class US06_UserListCreationStepDefs {
         uspage06.searchButton.click();
         Thread.sleep(3000);
         Assert.assertTrue(uspage06.searchName.getText().equals("emreeree"));
-
-
-
     }
 }
 
