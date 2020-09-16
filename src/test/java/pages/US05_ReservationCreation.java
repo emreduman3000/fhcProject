@@ -57,7 +57,7 @@ public class US05_ReservationCreation
     @FindBy(className = "bootbox-body")
     public WebElement successMessage;
 
-    @FindBy(xpath="//button[@class='btn btn-primary']")
+    @FindBy(xpath="//button[@class='btn.btn-primary']")
     public WebElement alertOKButton;
 
     @FindBy(name = "ContactEmail")
@@ -67,4 +67,6 @@ public class US05_ReservationCreation
     public  WebElement searchButton;
     @FindBy(xpath = "//*[@id='datatable_ajax']/tbody/tr[1]/td[11]")
     public WebElement registeredEmail;
+
+
 }

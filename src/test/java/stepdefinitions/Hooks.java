@@ -15,9 +15,9 @@ public class Hooks {
 
     @Before(value = "@fhcproject and not @userstory01")
     public void login(){
-        Driver.getDriver().get(ConfigurationReader.getProp("fhc_login_url"));
-        loginPage.username.sendKeys(ConfigurationReader.getProp("validUsername"));
-        loginPage.password.sendKeys(ConfigurationReader.getProp("validPassword"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("fhc_login_url"));
+        loginPage.username.sendKeys(ConfigurationReader.getProperty("validUsername"));
+        loginPage.password.sendKeys(ConfigurationReader.getProperty("validPassword"));
         loginPage.loginButton.submit();
     }
 

@@ -14,7 +14,7 @@ public class US03_HotelCreationStepDefs {
     US03_HotelCreation us03_hotelCreation = new US03_HotelCreation();
 
     @Given("Navigate to Hotel List")
-    public void navigate_to_hotel_list() {
+    public void navigate_to_hotel_list()  {
         Driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         us03_hotelCreation.hotelManagementButton.click();
         Driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);

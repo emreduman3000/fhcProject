@@ -14,7 +14,7 @@ public class US01_LoginPageStepDefs  {
 
     @Given("Environment must be accesable")
     public void environment_must_be_accesable() {
-        Driver.getDriver().get(ConfigurationReader.getProp("fhc_login_url"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("fhc_login_url"));
         Assert.assertEquals(Driver.getDriver().getTitle(),"Fhctrip - Log in");
     }
 

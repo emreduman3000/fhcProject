@@ -40,10 +40,10 @@ Feature: FHCProject
   Scenario: US05 Reservation can be created
     Given ROOM RESERVATIONS page must be accessible
     And  ADD ROOM RESERVATION must be executable
+    And  User enters invalid datas at Create Hotelroomreservation
+    And  Clear invalid data
     And  User enters valid datas at Create Hotelroomreservation
     And  Alert Box must be accessible
-    And  Clear invalid data
-    And  User enters invalid datas at Create Hotelroomreservation
     Then  LIST OF RESERVATION must be accessible
 
   @userstory06
